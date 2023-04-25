@@ -1,3 +1,7 @@
+if(JavaVersion.current() != JavaVersion.VERSION_1_8){
+    throw new GradleException("This build must be run with java 8")
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
@@ -5,8 +9,8 @@ apply plugin: 'application'
 mainClassName = 'hello.HelloWorld'
 
 // tag::repositories[]
-repositories { 
-    mavenCentral() 
+repositories {
+    mavenCentral()
 }
 // end::repositories[]
 
